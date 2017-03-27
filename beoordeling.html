@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>Beoordelingslijst</title>
+</head>
+<body>
+    
+    <form>
+        Cijfer :<input type="number" id="input1">
+    </form>
+    
+    <button onclick="knop1()">Uitslag</button>
+    <br>
+    <div id="een"></div>
+    <br>
+    <form>
+        Cijfer2 :<input type="number" id="input2">
+    </form>
+    
+    <button onclick="knop2()">Uitslag2</button>
+    <br>
+    <div id="twee"></div>
+    
+    
+    
+    
+    <script>
+
+        function knop1(){
+            var cijfer = document.getElementById('input1').value;
+            
+            if (cijfer < 50){
+                beoordeling = "onvoldoende";
+            } else if(cijfer < 60){
+                beoordeling = "matig";
+            }else if(cijfer < 75){
+                beoordeling = "voldoende";
+            }else if(cijfer <= 100){
+                beoordeling = "goed";
+            }
+            
+            var beoordeling;
+            
+            document.getElementById("een").innerHTML = "Het cijfer is " + cijfer + " en is dus een " + beoordeling;
+        }
+        
+        function knop2(){
+         
+            var cijfer2 = document.getElementById('input2').value;
+            
+            if (cijfer2 < 50){
+                beoordeling2 = "onvoldoende";
+            } else if(cijfer2 < 60){
+                beoordeling2 = "matig";
+            }else if(cijfer2 < 75){
+                beoordeling2 = "voldoende";
+            }else if(cijfer2 <= 100){
+                beoordeling2 = "goed";
+            }
+            
+            var beoordeling2;
+            
+            document.getElementById("twee").innerHTML = "Het is een " + beoordeling2 + " want het cijfer is een " + cijfer2;
+        }
+        
+        
+        
+    </script>    
+</body>
+</html>
